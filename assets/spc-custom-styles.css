@@ -210,9 +210,9 @@ body {
 }
 
 /*Dash Daq Graduatebar */
-#Diameter_OOC_graph > div > div,
-#Etch1_OOC_graph > div > div,
-#Film-Thickness_OOC_graph > div > div,
+#Power_OOC_graph > div > div,
+#Voltage_OOC_graph > div > div,
+#Current_OOC_graph > div > div,
 #Metric4_OOC_graph > div > div,
 #Etch2_OOC_graph > div > div,
 #Line-Width_OOC_graph > div > div,

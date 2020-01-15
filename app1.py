@@ -164,17 +164,17 @@ def build_banner():
             html.Div(
                 id="banner-text",
                 children=[
-                    html.H5("Manufacturing SPC Dashboard"),
-                    html.H6("Process Control and Exception Reporting"),
+                    html.H5("TTD SubStation Power Consumption "),
+                    html.H6("Substation Devices Reporting"),
                 ],
             ),
             html.Div(
                 id="banner-logo",
                 children=[
                     html.Button(
-                        id="learn-more-button", children="LEARN MORE", n_clicks=0
+                        id="learn-more-button", children="SMARTTRAK", n_clicks=0
                     ),
-                    html.Img(id="logo", src=app.get_asset_url("dash-logo-new.png")),
+                    html.Img(id="logo", src=app.get_asset_url("smarttrak_logo.png")),
                 ],
             ),
         ],
@@ -396,7 +396,7 @@ def build_quick_stats_panel():
             html.Div(
                 id="card-1",
                 children=[
-                    html.P("Operator ID"),
+                    html.P("Device ID"),
                     daq.LEDDisplay(
                         id="operator-led",
                         value="1704",
@@ -440,7 +440,7 @@ def build_top_panel(stopped_interval):
                 id="metric-summary-session",
                 className="eight columns",
                 children=[
-                    generate_section_banner("Process Control Metrics Summary"),
+                    generate_section_banner("Substation Metrics Summary"),
                     html.Div(
                         id="metric-div",
                         children=[
@@ -665,7 +665,7 @@ def build_chart_panel():
         id="control-chart-container",
         className="twelve columns",
         children=[
-            generate_section_banner("Live SPC Chart"),
+            generate_section_banner("Live Power Consumption Chart"),
             dcc.Graph(
                 id="control-chart-live",
                 figure=go.Figure(
