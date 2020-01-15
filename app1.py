@@ -117,10 +117,10 @@ class DeviceList(Resource):
     def get(self):
         return {'devices': [x.json() for x in DeviceModel.query.all()]}
 
-@server.route('/')
-def index():
-    devices = DeviceModel.query.all()
-    return render_template('index.html',devices=devices)
+#@server.route('/')
+#def index():
+    #devices = DeviceModel.query.all()
+    #return render_template('index.html',devices=devices)
 
 api.add_resource(Device, '/device/<string:devId>')
 api.add_resource(DeviceList, '/devices')
@@ -128,7 +128,8 @@ api.add_resource(DeviceList, '/devices')
 app = dash.Dash(
     __name__,
     server=server,
-    routes_pathname_prefix='/dash/'
+    #routes_pathname_prefix='/dash/'
+    meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],
 )
 
 app.layout = html.Div("My Dash app")
