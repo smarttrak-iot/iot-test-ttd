@@ -338,12 +338,12 @@ def update_output_div(input_value):
     devices = DeviceModel.query.all()
     return [
         html.Table(
-            [html.Tr([html.Th('DeviceID')] + [html.Th('rphvol')] + [html.Th('yphvol')] + [html.Th('bphvol')] +
-                     [html.Th('rphcu')] + [html.Th('yphcu')] + [html.Th('bphcu')] +
-                     [html.Th('necu')] + [html.Th('freq')] + [html.Th('phrpwr')] + [html.Th('phrpwrfun')] + [html.Th('phrepwr')] + [html.Th('ph3pwr')] + [html.Th('rphpf')] +
-                     [html.Th('yphpf')] + [html.Th('bphpf')] + [html.Th('avgpf')] + [html.Th('rphang')] +
-                     [html.Th('yphang')] + [html.Th('bphang')] + [html.Th('avgvol')] + [html.Th('actfwdABS')] +
-                     [html.Th('apfwdABS')] + [html.Th('relagfwdABS')] + [html.Th('releadfwdABS')])] +
+            [html.Tr([html.Th('Dev')] + [html.Th('rphV')] + [html.Th('yphV')] + [html.Th('bphV')] +
+                     [html.Th('rphI')] + [html.Th('yphI')] + [html.Th('bphI')] +
+                     [html.Th('neI')] + [html.Th('freq')] + [html.Th('phrP')] + [html.Th('phrPfn')] + [html.Th('phrepwr')] + [html.Th('ph3P')] + [html.Th('rphpf')] +
+                     [html.Th('yphpf')] + [html.Th('bphpf')] + [html.Th('Apf')] + [html.Th('rphAn')] +
+                     [html.Th('yphAn')] + [html.Th('bphAn')] + [html.Th('AvgV')] + [html.Th('|actfwd|')] +
+                     [html.Th('|apfwd|')] + [html.Th('|rg|')] + [html.Th('|rd|')])] +
             [html.Tr([html.Td(dev.devId)] + [html.Td(dev.rphvol)] + [html.Td(dev.yphvol)] + [html.Td(dev.bphvol)] +
                      [html.Td(dev.rphcu)] + [html.Td(dev.yphcu)] + [html.Td(dev.bphcu)] +
                      [html.Td(dev.necu)] + [html.Td(dev.freq)] + [html.Td(dev.phrpwr)] + [html.Td(dev.phrpwrfun)] + [html.Td(dev.phrepwr)] + [html.Td(dev.ph3pwr)] + [html.Td(dev.rphpf)] +
