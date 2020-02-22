@@ -201,38 +201,14 @@ class Device(Resource):
 
         device = DeviceModel.find_by_name(devId)
 
-        if device is None:
-            device = DeviceModel(devId, data['rphvol'],data['yphvol'],data['bphvol'],data['rphcu'],data['yphcu'],
+        
+        device = DeviceModel(devId, data['rphvol'],data['yphvol'],data['bphvol'],data['rphcu'],data['yphcu'],
                                         data['bphcu'],data['necu'],data['freq'],data['phrpwr'],data['phrpwrfun'],data['phrepwr'],data['ph3pwr'],
                                         data['rphpf'],
                                         data['yphpf'],data['bphpf'],data['avgpf'],data['rphang'],data['yphang'],
                                         data['bphang'],data['avgvol'],data['actfwdABS'],data['apfwdABS'],data['relagfwdABS'],
                                         data['releadfwdABS'])
-        else:
-            device.rphvol = data['rphvol']
-            device.yphvol = data['yphvol']
-            device.bphvol = data['bphvol']
-            device.rphcu = data['rphcu']
-            device.yphcu = data['yphcu']
-            device.bphcu = data['bphcu']
-            device.necu = data['necu']
-            device.freq = data['freq']
-            device.phrpwr = data['phrpwr']
-            device.phrpwrfun = data['phrpwrfun']
-            device.phrepwr = data['phrepwr']
-            device.ph3pwr = data['ph3pwr']
-            device.rphpf = data['rphpf']
-            device.yphpf = data['yphpf']
-            device.bphpf = data['bphpf']
-            device.avgpf = data['avgpf']
-            device.rphang = data['rphang']
-            device.yphang = data['yphang']
-            device.bphang = data['bphang']
-            device.avgvol = data['avgvol']
-            device.actfwdABS = data['actfwdABS']
-            device.apfwdABS = data['apfwdABS']
-            device.relagfwdABS = data['relagfwdABS']
-            device.releadfwdABS = data['releadfwdABS']
+
 
         #data = Device.parser.parse_args()
 
